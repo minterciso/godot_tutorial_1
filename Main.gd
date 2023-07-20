@@ -3,6 +3,7 @@ extends Node
 @export var mob_scene: PackedScene
 var difficulty = 1
 var score
+	
 
 func set_difficulty_easy():
 	difficulty = 1
@@ -30,7 +31,7 @@ func game_over():
 func new_game():
 	score = 0
 	$HUD.update_score(score)
-	$HUD.show_message("Get Ready")
+	$HUD.show_message("READY")
 	$Player.start($StartPosition.position)
 	$StartTimer.start()
 	get_tree().call_group("mobs", "queue_free")
